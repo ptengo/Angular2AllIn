@@ -1,0 +1,38 @@
+    <div class="dashboard" layout="row"  layout-align="center center">
+      <md-card>
+        <h1>Dates</h1>
+      
+        <div *ngFor="let chat of chats; let last = last; let i = index" layout-align="center center" [ngClass]="{last: last}">
+          <!--<img md-card-image src="{{ chat.img }}">-->
+          <md-card-content>
+            <p>{{ chat.name }}</p>
+          </md-card-content>
+          <md-card-actions>
+            <button md-button (click)="likeMe(i)">
+                <i class="material-icons md-18" [class.red-color]="chat.liked == '1'">favorite</i> LIKE
+            </button>
+            <button md-button (click)="deleteMe(i)">
+                <i class="material-icons md-18">clear</i> REMOVE 
+            </button>
+          </md-card-actions>
+        </div>
+        <md-card-footer class="footer">
+          <button md-fab  class="firstDateBtn" (click)="chatMood($event)">
+            <md-icon class="md-24">add</md-icon>
+          </button>
+        </md-card-footer>
+      </md-card>
+    </div>
+    <app-chat (change)="chatMood($event)" *ngIf="showChat" [@customTransition]="showChat"></app-chat>
+
+     <!-- <md-card *ngIf="showChat" class="activeChat">
+        <md-card-title>
+          Chat
+        </md-card-title>
+        <md-card-actions class="closeChatBtn">
+          <button  (click)="toggleChat()">
+           <i class="material-icons md-18">close</i>
+          </button>
+        </md-card-actions>
+        
+      </md-card>-->

@@ -1,0 +1,61 @@
+.closeChatBtn {
+    margin-left: 630px;
+    position: absolute;
+    top: -10px;
+}
+
+.activeChat {
+    height: 373px;
+    width: 652px;
+    bottom: 377px;
+    left: 508px;
+    position: absolute;
+}
+
+.dateProfile {
+    height: 15%;
+    left: 50%;
+    padding-bottom: 10px;
+    background-color: #FF4081;
+}
+
+.closeButton {
+    position: absolute;
+    bottom: 42%;
+    left: 95%;
+}
+
+.profile {
+    top: 5%;
+    left: 80%;
+    position: absolute;
+    color: white;
+}
+
+.textContainer {
+    padding: 10%;
+    height: 70%;
+}
+
+.sendButton {
+    position: absolute;
+    bottom: 5px;
+    left: 77%;
+    background-color: #FF4081;
+}
+
+.send {
+    color: white;
+}
+.textField {
+    height: 47px;
+    margin-left: 5px;
+}
+
+.chatContainer{
+    position: absolute;
+    top: 30%;
+    width: 400px;
+    height: 360px;
+    left: 53%;
+}

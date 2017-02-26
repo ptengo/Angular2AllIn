@@ -1,0 +1,23 @@
+
+
+<div class="preferences" layout="row"  layout-align="center center">
+  
+    <md-card>
+      <h1>Preferences</h1>
+    </md-card>
+      
+      <md-card *ngFor="let pic of pics; let i = index" layout-align="center center">
+        <!--<img md-card-image src="{{ pic.img }}">-->
+          <md-card-content>
+            <p>{{ pic.name }}</p>
+          </md-card-content>
+          <md-card-actions>
+            <button md-button (click)="likeMe(i)">
+                <i class="material-icons md-18" [class.red-color]="pic.liked == '1'">check_circle</i> ADD
+            </button>
+            <button md-button (click)="deleteMe(i)">
+                <i class="material-icons md-18">delete</i> DELETE 
+            </button>
+          </md-card-actions>
+      </md-card>
+</div>

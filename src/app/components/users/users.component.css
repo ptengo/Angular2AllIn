@@ -1,0 +1,16 @@
+.users-card {
+    position: absolute;
+    left: 35%;
+    top: 30%;
+    height: 360px;
+}
+.mdl-card__actions {
+    height: 40%;
+}
+
+.users-card .mdl-buttonNew {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    
+}

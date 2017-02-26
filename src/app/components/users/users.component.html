@@ -1,0 +1,25 @@
+<!--<div class="container">
+  <div class="row" *ngFor="let user of users">
+    <div class="card card-block">
+      <h4 class="card-title">{{ user.name }}</h4>-->
+      <!--<p class="card-text">{{post.body}}</p>-->
+      <!--<a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
+    </div>
+  </div>
+</div>-->
+
+<div class="users-card mdl-card mdl-shadow--2dp">
+    <button class="mdl-buttonNew mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent" (click)="chatMood($event)">
+        <i class="material-icons mdl-color-text--white" role="presentation">add</i>
+        <span class="visuallyhidden">add</span>
+    </button>
+    <div class="mdl-card__actions mdl-card--border">
+        <div class="mdl-card__supporting-text"  *ngFor="let user of users; let last = last; let i = index">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                {{user.name}}
+            </a>
+        </div>
+    </div>
+</div>
+<app-chat (change)="chatMood($event)" *ngIf="showChat" [@customTransition]="showChat"></app-chat>

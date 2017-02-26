@@ -1,0 +1,38 @@
+  <!--<md-card  class="activeChat">
+    <md-card-title>
+      Chat
+    </md-card-title>
+    <md-card-actions class="closeChatBtn">
+      <button  (click)="toggleChat($event)">
+        <i class="material-icons md-18">close</i>
+      </button>
+    </md-card-actions>
+    
+  </md-card>-->
+  
+  
+  <div class="chatContainer mdl-card mdl-shadow--2dp"> 
+    <div class="dateProfile">
+      <div class="profile">
+        {{name}}
+      </div>
+    </div>
+    <div class="textContainer">
+      Chat
+    </div>
+    <div class="inputContainer">
+      <form action="#">
+        <md-input-container md-tooltip="Say hello!" class="textField">
+          <input mdInput placeholder="Text">
+        </md-input-container>
+      </form> 
+      <div class="closeButton">
+        <md-icon (click)="toggleChat($event)">chevron_left</md-icon>
+      </div>
+      <div class="sendButtonContainer">
+        <button class="sendButton" md-raised-button md-tooltip="Send your message!" >
+          <span class="send">Send</span>
+        </button>
+      </div>
+    </div>
+  </div>

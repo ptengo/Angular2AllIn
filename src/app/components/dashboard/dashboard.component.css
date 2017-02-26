@@ -1,0 +1,19 @@
+.dashboard {
+    width: 700px;
+    /*margin-left: 500px;*/
+    margin-top: 150px;
+}
+
+.firstDateBtn {
+    left: 90%;
+    bottom: 10px;
+    
+}
+
+.footer {
+    position: absolute;
+}
+
+.dates {
+    outline: none;
+}
