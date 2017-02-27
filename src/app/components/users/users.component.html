@@ -16,10 +16,11 @@
     </button>
     <div class="mdl-card__actions mdl-card--border">
         <div class="mdl-card__supporting-text"  *ngFor="let user of users; let last = last; let i = index">
-            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                {{user.name}}
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" (click)="chatMood($event)" (click)="setName(user.name)">
+                <span>{{user.name}}</span>
+                
             </a>
         </div>
     </div>
 </div>
-<app-chat (change)="chatMood($event)" *ngIf="showChat" [@customTransition]="showChat"></app-chat>
+<app-chat (change)="chatMood($event)" *ngIf="showChat" [name]="name" [@customTransition]="showChat"></app-chat>

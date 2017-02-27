@@ -13,6 +13,7 @@ export class UsersComponent implements OnInit {
 
 	users: any = [];
  	showChat = false;
+	name: string;
   	constructor(private usersService: UsersService ) { }
 
   	ngOnInit() {
@@ -24,6 +25,14 @@ export class UsersComponent implements OnInit {
 
 	chatMood(event) {
     this.showChat = event;
+		//this.name = event;
+		this.name = event.name;
+		console.log(this.name);
+		console.log(event);
   }
+
+	setName(userName: string) {
+		this.name = userName;
+	}
 
 }

@@ -10,7 +10,9 @@ export class ChatComponent implements OnInit {
   @Input()
   showChat: boolean;
 
+  @Input()
   name: string;
+
   @Output()
   change: EventEmitter<boolean> = new EventEmitter<boolean>();
   
